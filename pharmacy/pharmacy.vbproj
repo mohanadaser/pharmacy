@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{843FE096-36EA-4167-962A-33D292904158}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>pharmacy.My.MyApplication</StartupObject>
+    <RootNamespace>pharmacy</RootNamespace>
+    <AssemblyName>pharmacy</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>pharmacy.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>pharmacy.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReport2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetbarcod.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetbarcod.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetbarcod.vb">
+      <DependentUpon>DataSetbarcod.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="forms\main screen\backupvb.Designer.vb">
+      <DependentUpon>backupvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\main screen\backupvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main screen\companydata.Designer.vb">
+      <DependentUpon>companydata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\main screen\companydata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main screen\follow_user.Designer.vb">
+      <DependentUpon>follow_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\main screen\follow_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\customers\oper_cust.Designer.vb">
+      <DependentUpon>oper_cust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\customers\oper_cust.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\items\items_show.Designer.vb">
+      <DependentUpon>items_show.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\items\items_show.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\khazina and sanadat\payment.Designer.vb">
+      <DependentUpon>payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\khazina and sanadat\payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\khazina and sanadat\sanadat_show.Designer.vb">
+      <DependentUpon>sanadat_show.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\khazina and sanadat\sanadat_show.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main screen\allow_users.Designer.vb">
+      <DependentUpon>allow_users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\main screen\allow_users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\items\exp_qty.Designer.vb">
+      <DependentUpon>exp_qty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\items\exp_qty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main screen\login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\main screen\login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\khazina and sanadat\masrofat.Designer.vb">
+      <DependentUpon>masrofat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\khazina and sanadat\masrofat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\khazina and sanadat\sanadat.Designer.vb">
+      <DependentUpon>sanadat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\khazina and sanadat\sanadat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main screen\users.Designer.vb">
+      <DependentUpon>users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\main screen\users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salebill\show_resale.Designer.vb">
+      <DependentUpon>show_resale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\salebill\show_resale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salebill\CrystalResale.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalResale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="forms\salebill\resalereport.Designer.vb">
+      <DependentUpon>resalereport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\salebill\resalereport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salebill\CrystalRepsalebill.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalRepsalebill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="forms\buybill\bills_show.Designer.vb">
+      <DependentUpon>bills_show.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\buybill\bills_show.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\buybill\buybill.Designer.vb">
+      <DependentUpon>buybill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\buybill\buybill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salebill\re salebill.Designer.vb">
+      <DependentUpon>re salebill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\salebill\re salebill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salebill\showsale_bills.Designer.vb">
+      <DependentUpon>showsale_bills.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\salebill\showsale_bills.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salebill\reportsalebill.Designer.vb">
+      <DependentUpon>reportsalebill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\salebill\reportsalebill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\salebill\salebill.Designer.vb">
+      <DependentUpon>salebill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\salebill\salebill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\importers\oper_importer.Designer.vb">
+      <DependentUpon>oper_importer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\importers\oper_importer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\buybill\rebuy_show.Designer.vb">
+      <DependentUpon>rebuy_show.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\buybill\rebuy_show.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\buybill\cryfrmbuybill.Designer.vb">
+      <DependentUpon>cryfrmbuybill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\buybill\cryfrmbuybill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\buybill\CrystalReportrebuy.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportrebuy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="forms\buybill\reportrebuy.Designer.vb">
+      <DependentUpon>reportrebuy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\buybill\reportrebuy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\buybill\CrystalReportbuy.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportbuy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="forms\buybill\expire_date.Designer.vb">
+      <DependentUpon>expire_date.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\buybill\expire_date.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\buybill\rebuybill.Designer.vb">
+      <DependentUpon>rebuybill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\buybill\rebuybill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\buybill\showbuybills.Designer.vb">
+      <DependentUpon>showbuybills.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\buybill\showbuybills.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\khazina and sanadat\khazina.Designer.vb">
+      <DependentUpon>khazina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\khazina and sanadat\khazina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pharmacyDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pharmacyDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="forms\importers\CrystalRptimport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalRptimport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="forms\importers\importdetails.Designer.vb">
+      <DependentUpon>importdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\importers\importdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\importers\importers.Designer.vb">
+      <DependentUpon>importers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\importers\importers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\customers\Crystalrptcust.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crystalrptcust.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="forms\customers\custdetails.Designer.vb">
+      <DependentUpon>custdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\customers\custdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pharmacyDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pharmacyDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="forms\items\CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="forms\items\items.Designer.vb">
+      <DependentUpon>items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\items\items.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main screen\mainpage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main screen\mainpage.Designer.vb">
+      <DependentUpon>mainpage.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\items\manage_items.Designer.vb">
+      <DependentUpon>manage_items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\items\manage_items.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="forms\customers\newcustomers.Designer.vb">
+      <DependentUpon>newcustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\customers\newcustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pharmacyDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pharmacyDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\main screen\backupvb.resx">
+      <DependentUpon>backupvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\main screen\companydata.resx">
+      <DependentUpon>companydata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\main screen\follow_user.resx">
+      <DependentUpon>follow_user.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\customers\oper_cust.resx">
+      <DependentUpon>oper_cust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\items\items_show.ar.resx">
+      <DependentUpon>items_show.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\items\items_show.resx">
+      <DependentUpon>items_show.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\khazina and sanadat\payment.resx">
+      <DependentUpon>payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\khazina and sanadat\sanadat_show.resx">
+      <DependentUpon>sanadat_show.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\main screen\allow_users.resx">
+      <DependentUpon>allow_users.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\items\exp_qty.resx">
+      <DependentUpon>exp_qty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\main screen\login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\khazina and sanadat\masrofat.resx">
+      <DependentUpon>masrofat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\khazina and sanadat\sanadat.resx">
+      <DependentUpon>sanadat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\main screen\users.resx">
+      <DependentUpon>users.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salebill\show_resale.resx">
+      <DependentUpon>show_resale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salebill\CrystalResale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalResale.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salebill\resalereport.resx">
+      <DependentUpon>resalereport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salebill\CrystalRepsalebill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalRepsalebill.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\buybill\bills_show.resx">
+      <DependentUpon>bills_show.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\buybill\buybill.resx">
+      <DependentUpon>buybill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salebill\re salebill.resx">
+      <DependentUpon>re salebill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salebill\showsale_bills.resx">
+      <DependentUpon>showsale_bills.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salebill\reportsalebill.resx">
+      <DependentUpon>reportsalebill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\salebill\salebill.resx">
+      <DependentUpon>salebill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\importers\oper_importer.resx">
+      <DependentUpon>oper_importer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\buybill\rebuy_show.resx">
+      <DependentUpon>rebuy_show.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\buybill\cryfrmbuybill.resx">
+      <DependentUpon>cryfrmbuybill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\buybill\CrystalReportrebuy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportrebuy.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\buybill\reportrebuy.resx">
+      <DependentUpon>reportrebuy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\buybill\CrystalReportbuy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportbuy.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\buybill\expire_date.resx">
+      <DependentUpon>expire_date.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\buybill\rebuybill.resx">
+      <DependentUpon>rebuybill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\buybill\showbuybills.resx">
+      <DependentUpon>showbuybills.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\importers\CrystalRptimport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalRptimport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\importers\importdetails.resx">
+      <DependentUpon>importdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\importers\importers.resx">
+      <DependentUpon>importers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\customers\Crystalrptcust.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crystalrptcust.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\customers\custdetails.resx">
+      <DependentUpon>custdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\items\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\items\items.resx">
+      <DependentUpon>items.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\main screen\mainpage.resx">
+      <DependentUpon>mainpage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\items\manage_items.resx">
+      <DependentUpon>manage_items.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\khazina and sanadat\khazina.resx">
+      <DependentUpon>khazina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\customers\newcustomers.resx">
+      <DependentUpon>newcustomers.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetbarcod.xsc">
+      <DependentUpon>DataSetbarcod.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetbarcod.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetbarcod.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSetbarcod.xss">
+      <DependentUpon>DataSetbarcod.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="pharmacyDataSet.xsc">
+      <DependentUpon>pharmacyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pharmacyDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pharmacyDataSet.xss">
+      <DependentUpon>pharmacyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyDataSet1.xsc">
+      <DependentUpon>pharmacyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pharmacyDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pharmacyDataSet1.xss">
+      <DependentUpon>pharmacyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyDataSet2.xsc">
+      <DependentUpon>pharmacyDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pharmacyDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pharmacyDataSet2.xss">
+      <DependentUpon>pharmacyDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accounting-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accounting-icon %281%29 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-user-group-delete-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-user-group-new-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-user-group-new-icon %281%29 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_shopping_cart_50px - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-session-logout-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-session-logout-icon %281%29 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-session-logout-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-session-logout-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calender-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calender-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car-Items-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car-Items-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car-Items-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\companies-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\companies-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-icon %281%29 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event-search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Groups-Meeting-Dark-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_minimize_window_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_minimize_window_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_new_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_new_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_print_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_print_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_16 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_32 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_update_16 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_update_32 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_group_16 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_group_32 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_groups_16 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_groups_32 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice-icon %281%29 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Item-configuration-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kill-Bill-Vol-2-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product-sales-report-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safe-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-as-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon %281%29 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SEO-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SEO-icon %281%29 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-2-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\symbol-check-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync-icon %281%29 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thief-The-Dark-Project-1-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thief-The-Dark-Project-1-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Files-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Visio-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window-Enter-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon - Copy1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
